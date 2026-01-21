@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elite Planners | Luxury Event Planning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+.flag-icon {
+  width: 18px;
+  height: 12px;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+</style>
+  
+  <style>
+    :root {
+      --primary: #c9a45b;
+      --primary-dark: #a5853f;
+      --bg-dark: #050814;
+      --bg-light: #f7f5f2;
+      --text-light: #ffffff;
+      --text-dark: #222222;
+      --accent: #e6ddd0;
+      --font-heading: "Playfair Display", "Times New Roman", serif;
+      --font-body: "Poppins", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header / Hero */
+    header {
+      background: radial-gradient(circle at top, #1c2545 0, #050814 55%, #000000 100%);
+      color: var(--text-light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo span {
+      display: inline-block;
+      padding: 4px 10px;
+      border: 1px solid var(--primary);
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-links a {
+      opacity: 0.8;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      color: var(--primary);
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(201, 164, 91, 0.4);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      max-width: 480px;
+      opacity: 0.9;
+      margin-bottom: 24px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--text-light);
+      padding: 12px 26px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+    }
+
+    .btn-outline {
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: transparent;
+      padding: 11px 20px;
+      color: var(--text-light);
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 12px;
+      opacity: 0.85;
+    }
+
+    .hero-meta strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      background: rgba(8, 11, 31, 0.92);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 16px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-photo {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  height: 260px;
+  background: url("https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=800") center/cover no-repeat;
+}
+
+    
+
+    .hero-overlay-tag {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 14px;
+      font-size: 12px;
+      color: #ddd;
+    }
+
+    .hero-stat-item strong {
+      display: block;
+      font-size: 18px;
+      color: var(--primary);
+    }
+
+    .hero-floating {
+      position: absolute;
+      right: -10px;
+      top: 16px;
+      background: #111421;
+      border-radius: 16px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #ddd;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-floating strong {
+      color: var(--primary);
+    }
+
+    /* Sections */
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-family: var(--font-heading);
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      font-size: 14px;
+      color: #555;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* Services */
+    .services {
+      background: #ffffff;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: #faf8f4;
+      border-radius: 16px;
+      padding: 24px 20px;
+      border: 1px solid #eee0c7;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-family: var(--font-heading);
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 11px;
+    }
+
+    .tag {
+      padding: 4px 8px;
+      background: #efe4cf;
+      border-radius: 999px;
+    }
+
+    /* About */
+    .about {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about p {
+      font-size: 14px;
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+
+    .about-highlight {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .about-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 14px;
+      color: #eee;
+    }
+
+    .about-list li {
+      margin-bottom: 8px;
+    }
+
+    .about-list span {
+      color: var(--primary);
+      margin-right: 6px;
+    }
+
+    .about-card {
+      background: #111421;
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .about-card-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      color: #ccc;
+    }
+
+    .about-card-main {
+      font-size: 26px;
+      font-family: var(--font-heading);
+      margin-bottom: 6px;
+    }
+
+    .about-card-sub {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 16px;
+    }
+
+    .about-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .about-chip {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Portfolio */
+    .portfolio {
+      background: #f6f4f0;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: #000;
+      color: #fff;
+      position: relative;
+    }
+
+    .portfolio-img {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .portfolio-img.wedding {
+      background-image: url("https://images.pexels.com/photos/3014857/pexels-photo-3014857.jpeg?auto=compress&cs=tinysrgb&w=800");
+    }
+
+    .portfolio-img.corporate {
+      background-image: url("https://images.pexels.com/photos/1708912/pexels-photo-1708912.jpeg?auto=compress&cs=tinysrgb&w=800");
+    }
+
+    .portfolio-img.social {
+      background-image: url("https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=800");
+    }
+
+    .portfolio-info {
+      padding: 16px 16px 18px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.4));
+      position: relative;
+    }
+
+    .portfolio-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #f0e1c3;
+      margin-bottom: 4px;
+    }
+
+    .portfolio-title {
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .portfolio-meta {
+      font-size: 12px;
+      color: #ddd;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: #ffffff;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      border-radius: 16px;
+      border: 1px solid #eee0c7;
+      background: #faf8f4;
+      padding: 18px 18px 20px;
+      font-size: 13px;
+    }
+
+    .testimonial-quote {
+      margin-bottom: 12px;
+      color: #555;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .testimonial-tag {
+      font-size: 11px;
+      color: #777;
+    }
+
+    /* Contact */
+    .contact {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .contact form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 12px;
+    }
+
+    .form-row.two {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      display: block;
+      color: #ccc;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 11px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(8, 11, 31, 0.8);
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #777;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    .contact-info p {
+      margin-bottom: 8px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 13px;
+    }
+
+    .contact-list li {
+      margin-bottom: 6px;
+    }
+
+    .contact-badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ccc;
+    }
+
+    /* Footer */
+    footer {
+      background: #02030a;
+      color: #aaa;
+      font-size: 12px;
+      padding: 14px 20px 18px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+      }
+      .hero-right {
+        order: -1;
+      }
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .nav-links {
+        font-size: 12px;
+        gap: 14px;
+      }
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER / HERO -->
+  <header id="home">
+    <nav class="nav">
+      <div class="logo">
+        Elite Planners
+        <span>EVENTS</span>
+      </div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Luxury Event Planning • Since 2025
+        </div>
+        <h1>
+          Turning your <span>moments</span><br />
+          into unforgettable experiences.
+        </h1>
+        <p class="hero-subtitle">
+          Elite Planners crafts bespoke weddings, social celebrations, and corporate events with meticulous attention to detail, seamless execution, and a touch of understated luxury.
+        </p>
+
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+            Book a Consultation →
+          </button>
+          <button class="btn-outline" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">
+            View Recent Events
+          </button>
+        </div>
+
+        <div class="hero-meta">
+          <span><strong>End-to-end</strong> planning & coordination</span>
+          <span><strong>Custom</strong> concepts for every event</span>
+          <span><strong>Serving</strong> Aligarh & beyond</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-photo">
+            <div class="hero-overlay-tag">Signature Luxury Reception</div>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <strong>50+</strong>
+              Guests per event on average
+            </div>
+            <div class="hero-stat-item">
+              <strong>100%</strong>
+              Stress-free host experience
+            </div>
+          </div>
+        </div>
+        <div class="hero-floating">
+          <strong>“Relax, we’ll handle everything.”</strong><br />
+          Concept, design, logistics, vendors & on‑day coordination.
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Services We Offer</h2>
+        <p>
+          From intimate gatherings to grand celebrations, Elite Planners manages every detail so you can be fully present in your special moments.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>Wedding Planning & Design</h3>
+          <p>
+            Complete wedding planning, from concept and décor to vendor management and on‑day coordination, tailored to your story and style.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Full Planning</span>
+            <span class="tag">Decor & Styling</span>
+            <span class="tag">Bride & Groom Support</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3>Social Events & Celebrations</h3>
+          <p>
+            Birthdays, engagements, anniversaries, baby showers and more, curated with creative themes, décor, and guest experience in mind.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Themed Parties</span>
+            <span class="tag">Milestone Events</span>
+            <span class="tag">Home & Venue</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3>Corporate Events & Launches</h3>
+          <p>
+            Professional planning for conferences, offsites, award nights, product launches and brand activations with flawless execution.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Corporate Galas</span>
+            <span class="tag">Brand Launch</span>
+            <span class="tag">Team Offsites</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3>Day-of Coordination</h3>
+          <p>
+            Already planned your event? Let Elite Planners take over timelines, vendors, and management on the day so everything runs smoothly.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Timeline Control</span>
+            <span class="tag">Vendor Management</span>
+            <span class="tag">Crisis Handling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About Elite Planners</h2>
+        <p>
+          Elite Planners is a boutique event planning studio dedicated to creating meaningful, stylish and well‑organized experiences for clients who value quality and detail.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <p>
+            Every event is treated like a one‑of‑a‑kind project with its own story, mood, and purpose. From the first consultation to the final guest departure, Elite Planners ensures every element works together beautifully.
+          </p>
+          <p>
+            The focus is on clear communication, transparent planning, and calm, professional coordination so you feel supported at every step.
+          </p>
+
+          <ul class="about-list">
+            <li><span>•</span>Concept & theme development</li>
+            <li><span>•</span>Venue scouting and layout planning</li>
+            <li><span>•</span>Vendor curation and negotiations</li>
+            <li><span>•</span>Detailed timelines & checklists</li>
+            <li><span>•</span>On‑site supervision and guest flow management</li>
+          </ul>
+
+          <div class="about-highlight">
+            Whether you are planning a wedding in Aligarh or a destination event elsewhere, Elite Planners ensures your celebration feels effortless, elegant, and truly yours.
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-title">Why Hosts Choose Us</div>
+          <div class="about-card-main">Stress‑free, stylish events.</div>
+          <div class="about-card-sub">
+            Elite Planners combines creative design with strong logistics so you never have to worry about what’s happening behind the scenes.
+          </div>
+          <div class="about-chip-row">
+            <div class="about-chip">Detail‑oriented planning</div>
+            <div class="about-chip">Vendor coordination</div>
+            <div class="about-chip">Budget‑friendly options</div>
+            <div class="about-chip">Custom décor concepts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO / GALLERY -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Signature Event Styles</h2>
+        <p>
+          A glimpse into the kind of ambience and experiences Elite Planners can create for your next celebration.
+        </p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-img wedding"></div>
+          <div class="portfolio-info">
+            <div class="portfolio-label">Modern Wedding</div>
+            <div class="portfolio-title">Elegant Pastel Ceremony</div>
+            <div class="portfolio-meta">Soft florals, warm lights, and curated details for an intimate, romantic experience.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-img corporate"></div>
+          <div class="portfolio-info">
+            <div class="portfolio-label">Corporate Gala</div>
+            <div class="portfolio-title">Chic Awards Night</div>
+            <div class="portfolio-meta">Sleek styling, stage management, and guest experience designed for brands.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-img social"></div>
+          <div class="portfolio-info">
+            <div class="portfolio-label">Social Celebration</div>
+            <div class="portfolio-title">Luxury Birthday Soirée</div>
+            <div class="portfolio-meta">Personality‑driven themes and décor that make your milestone unforgettable.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-heading">
+        <h2>What Clients Can Expect</h2>
+        <p>
+          Even before the first review, Elite Planners is built around the values that every happy host cares about most.
+        </p>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            “Clear communication, regular updates, and structured planning so you always know what’s happening and what’s next.”
+          </div>
+          <div class="testimonial-name">Communication & Clarity</div>
+          <div class="testimonial-tag">Process‑driven planning</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            “Thoughtful concepts, cohesive décor, and professional vendors that reflect your taste, budget, and priorities.”
+          </div>
+          <div class="testimonial-name">Personalized Design</div>
+          <div class="testimonial-tag">Tailored to your vision</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            “On the event day, a calm, present team handling logistics, timing, and last‑minute changes while you enjoy your guests.”
+          </div>
+          <div class="testimonial-name">On‑Day Support</div>
+          <div class="testimonial-tag">You enjoy, we manage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Plan Your Event With Us</h2>
+        <p>
+          Share a few details below and Elite Planners will get in touch to discuss ideas, budgets, and the best way to bring your event to life.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <form>
+          <div class="form-row two">
+            <div>
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Enter your full name" />
+            </div>
+            <div>
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" placeholder="+91 ..." />
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label for="event-type">Event Type</label>
+              <select id="event-type">
+                <option>Wedding</option>
+                <option>Engagement</option>
+                <option>Birthday / Anniversary</option>
+                <option>Corporate Event</option>
+                <option>Other Celebration</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="date">Event Date (if decided)</label>
+              <input type="date" id="date" />
+            </div>
+            <div>
+              <label for="location">City / Venue</label>
+              <input type="text" id="location" placeholder="e.g. Aligarh, Uttar Pradesh" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="details">Tell us about your event</label>
+              <textarea id="details" placeholder="Guest count, style, budget range, special requests..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            Submit Inquiry
+          </button>
+        </form>
+
+        <div class="contact-info">
+          <p><strong>Prefer to talk directly?</strong></p>
+          <ul class="contact-list">
+            <li>Call / WhatsApp: <strong>+91‑xxxxxxxxxx</strong></li>
+            <li>Email: <strong>eliteplanners.in@gmail.com</strong></li>
+            <li>Location: Aligarh, Uttar Pradesh (Serving All Over  India <img class="flag-icon" 
+       src="https://flagcdn.com/w20/in.png" 
+       alt="India Flag">)</li>
+          </ul>
+          <p class="contact-badge">
+            Available for on‑site meetings by appointment.
+          </p>
+          <p style="margin-top:16px; font-size:13px; color:#bbb;">
+            Follow Elite Planners on Instagram and Facebook for latest décor ideas, behind‑the‑scenes planning, and real event highlights.
+          </p>
+          <div class="contact-social">
+  <a href="https://www.instagram.com/eliteplanners.in" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+    <a href="https://wa.me/91xxxxxxxxxx" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Elite Planners. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#home">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+ 
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const SUPABASE_URL = "https://nfzkvvocdzaqefnypzgb.supabase.co";
+  const SUPABASE_KEY = "YOUR_SUPABASE_ANON_KEY";
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  emailjs.init("Cw-dd_mPS9EYzZXml");
+
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async function(e){
+    e.preventDefault();
+
+    const data = {
+      name: document.getElementById("name").value,
+      phone: document.getElementById("phone").value,
+      email: document.getElementById("email").value,
+      event_type: document.getElementById("event-type").value,
+      event_date: document.getElementById("date").value,
+      location: document.getElementById("location").value,
+      details: document.getElementById("details").value
+    };
+
+    const { error } = await supabaseClient.from("bookings").insert([data]);
+
+    if(error){
+      alert("❌ Booking failed. Check console.");
+      console.log(error);
+      return;
+    }
+
+    emailjs.send("service_p7hytsc","template_l99k9gs",{
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      event: data.event_type,
+      date: data.event_date,
+      location: data.location,
+      details: data.details
+    });
+
+    alert("✅ Thank you! Your booking has been received.");
+    form.reset();
+  });
+
+});
+</script>
+
+
+</body>
+</html>
