@@ -18,7 +18,7 @@ A responsive single-page luxury event planning website designed to showcase serv
 - GitHub Pages
 
 ## Live Demo
-https://saqibalam7.github.io/elite-planners/
+https://saqibalam7.github.io/Elite-planners/
 
 ## Note
 Supabase credentials have been removed from the public repository for security purposes.
